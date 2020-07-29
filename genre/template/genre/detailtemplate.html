@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'genre/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piece</title>
+</head>
+<body>
+{% block content %}
+      {% for pieceobj in collection.piece_set.all %}
+            <div align="centre">
+                <img src="{{pieceobj.piececover}}" height="200" height="200">
+                <h2><a {{pieceobj.title}}-{{pieceobj.artist}}</a> </h2>
+                <h3>{{pieceobj.typ}}</h3>
+                <h3>{{pieceobj.year}}</h3>
+                <br/>
+            </div>
+       {% endfor %}
+{%endblock%}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'genre/base.html' %}
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genre</title>
+</head>
+</body>
+{% block content %}
+       {% for x in object_list%}
+            <div align="centre">
+                <img src="{{x.collcover}}" height="200" height="200">
+                <h2><a href="{{x.id}}/">{{x.collection_name}}</a> </h2>
+                <h3>{{x.description}}</h3>
+                <br/>
+            </div>
+       {% endfor %}
+{%endblock%}
+</body>
+</html>
